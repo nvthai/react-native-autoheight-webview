@@ -1,14 +1,14 @@
-# react-native-autoheight-webview
+# @nvthai/react-native-autoheight-webview
 An auto height webview for React Native, even auto width for inline html.
 
-[![NPM Version](http://img.shields.io/npm/v/react-native-autoheight-webview.svg?style=flat-square)](https://www.npmjs.com/package/react-native-autoheight-webview)
-[![NPM Downloads](https://img.shields.io/npm/dt/react-native-autoheight-webview.svg?style=flat-square)](https://www.npmjs.com/package/react-native-autoheight-webview)
+[![NPM Version](http://img.shields.io/npm/v/@nvthai/react-native-autoheight-webview.svg?style=flat-square)](https://www.npmjs.com/package/@nvthai/react-native-autoheight-webview)
+[![NPM Downloads](https://img.shields.io/npm/dt/@nvthai/react-native-autoheight-webview.svg?style=flat-square)](https://www.npmjs.com/package/@nvthai/react-native-autoheight-webview)
 
 ## versioning
 
-`npm install react-native-autoheight-webview --save` (rn >= 0.59, be capable of Hooks)
+`npm install @nvthai/react-native-autoheight-webview --save` (rn >= 0.59, be capable of Hooks)
 
-`npm install react-native-autoheight-webview@1.0.1 --save` (0.57 <= rn < 0.59)
+`npm install @nvthai/react-native-autoheight-webview@1.0.1 --save` (0.57 <= rn < 0.59)
 
 Read [README_old](./README_old.md) for earlier version guide.
 
@@ -17,7 +17,7 @@ Read [README_old](./README_old.md) for earlier version guide.
 `react-native link react-native-webview`
 
 ```javascript
-import AutoHeightWebView from 'react-native-autoheight-webview'
+import AutoHeightWebView from '@nvthai/react-native-autoheight-webview'
 
 <AutoHeightWebView
     // default width is the width of screen
@@ -61,8 +61,8 @@ import AutoHeightWebView from 'react-native-autoheight-webview'
 
 
 ## showcase
-![react-native-autoheight-webview iOS](https://media.giphy.com/media/tocJYDUGCgwac0kkyB/giphy.gif)&nbsp;
-![react-native-autoheight-webview Android](https://media.giphy.com/media/9JyX1wZshYIxuPklHK/giphy.gif)
+![@nvthai/react-native-autoheight-webview iOS](https://media.giphy.com/media/tocJYDUGCgwac0kkyB/giphy.gif)&nbsp;
+![@nvthai/react-native-autoheight-webview Android](https://media.giphy.com/media/9JyX1wZshYIxuPklHK/giphy.gif)
 
 ## demo
 You may have to use yarn to install the dependencies of the demo and remove demo/node_modules/react-native-autoheight-webview/demo manually, cause of installing a local package with npm will create symlink, but there is no supporting of React Native to symlink (https://github.com/facebook/watchman/issues/105).

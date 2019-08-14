@@ -1,5 +1,5 @@
-// Type definitions for react-native-autoheight-webview 1.x
-// Project: https://github.com/iou90/react-native-autoheight-webview
+// Type definitions for @nvthai/react-native-autoheight-webview 1.x
+// Project: https://github.com/nvthai/react-native-autoheight-webview
 // Definitions by: Naveen Ithappu <https://github.com/naveen-ithappu>
 // TypeScript Version: 2.8
 import { Component } from "react";
