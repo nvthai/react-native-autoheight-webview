@@ -22,7 +22,7 @@ const updateSizeWithMessage = element =>
       return;
     }
     clearInterval(updateSizeInterval)
-    height = Math.min(${element}.offsetHeight, window.innerHeight ? window.innerHeight : ${screenHeight});
+    height = Math.min(${element}.offsetHeight, window.innerHeight ? window.innerHeight : ${screenHeight / 2});
     width = ${element}.offsetWidth || window.innerWidth;
     window.ReactNativeWebView.postMessage(JSON.stringify({ width: width, height: height }));
   }
