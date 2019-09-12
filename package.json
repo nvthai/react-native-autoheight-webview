@@ -1,6 +1,6 @@
 {
   "name": "@nvthai/react-native-autoheight-webview",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "An auto height webview for React Native, even auto width for inline html. Forked from https://github.com/iou90/react-native-autoheight-webview.git",
   "main": "autoHeightWebView",
   "types": "index.d.ts",
