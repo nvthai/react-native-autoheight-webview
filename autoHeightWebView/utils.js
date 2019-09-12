@@ -11,7 +11,6 @@ observer.observe(document, {
 });
 `;
 
-const screenHeight = Dimensions.get('window').height;
 const updateSizeWithMessage = element =>
   `
   var updateSizeInterval = null;
@@ -22,7 +21,7 @@ const updateSizeWithMessage = element =>
       return;
     }
     clearInterval(updateSizeInterval)
-    height = Math.min(${element}.offsetHeight, window.innerHeight ? window.innerHeight : ${screenHeight / 2});
+    height = ${element}.offsetHeight || window.innerHeight;
     width = ${element}.offsetWidth || window.innerWidth;
     window.ReactNativeWebView.postMessage(JSON.stringify({ width: width, height: height }));
   }
@@ -32,7 +31,7 @@ const updateSizeWithMessage = element =>
 const makeScalePageToFit = zoomable => `
 var meta = document.createElement('meta'); 
 meta.setAttribute('name', 'viewport'); 
-meta.setAttribute('content', 'width=device-width, user-scalable=${
+meta.setAttribute('content', 'width=device-width, initial-scale=1, user-scalable=${
   zoomable ? 'yes' : 'no'
 }'); document.getElementsByTagName('head')[0].appendChild(meta);
 `;
@@ -50,8 +49,8 @@ const getBaseScript = ({ style, zoomable }) =>
   }
   var width = ${getWidth(style)};
   ${updateSizeWithMessage('wrapper')}
-  // window.addEventListener('load', updateSize);
-  // window.addEventListener('resize', updateSize);
+  window.addEventListener('load', updateSize);
+  window.addEventListener('resize', updateSize);
   ${domMutationObserveScript}
   ${Platform.OS === 'ios' ? makeScalePageToFit(zoomable) : ''}
   updateSize();
